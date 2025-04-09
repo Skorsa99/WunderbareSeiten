@@ -21,7 +21,7 @@
         <div class="footer">
             <div class="horizontal-line-75"></div>
             <div style="display: flex; flex-direction: row;">
-                <div class="footer-text-element">Wunderbare Seiten V3.10</div>
+                <div class="footer-text-element">Wunderbare Seiten V3.11</div>
                 <div class="footer-text-element">|</div>
                 <a class="footer-text-element" href="about_us.html">Über Uns</a>
                 <div class="footer-text-element">|</div>
@@ -54,7 +54,7 @@
             }
     
             document.getElementById("description").textContent = book.longDescription;
-            document.getElementById("cover").style.backgroundImage = "url('src/images/covers/" + coverName + "')";
+            document.getElementById("cover").style.backgroundImage = "url('src/images/covers/" + book.coverName + "')";
         })
         .catch(err => console.error("Fehler beim Laden der JSON:", err));
     };
