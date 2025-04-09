@@ -38,7 +38,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(to right, white calc(100% - 45px), transparent);
+    background: linear-gradient(to right, var(--quadery-color) calc(100% - 45px), transparent);
     z-index: 10;
 }
 
@@ -51,7 +51,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: white;
+    background-color: var(--quadery-color);
     cursor: pointer;
     z-index: 10;
 }
@@ -158,5 +158,22 @@ body {
 .transition-vertically-white-transperent-45px {
     height: 100%;
     width: 45px;
-    background: linear-gradient(to right, white, transparent);
+    background: linear-gradient(to right, var(--quadery-color), transparent);
+}
+
+/* Buttons ------------------------------------------------------------------------------ */
+
+.purchase-button {
+    height: 45px;
+    width: 200px;
+    background-color: var(--primary-color);
+    border: none;
+    font-size: 16px;
+    color: var(--quadery-color);
+    box-shadow: var(--shadow-medium);
+    z-index: 100;
+    position: relative;
+    top: calc(100% - 65px);
+    left: -20px;
+    cursor: pointer;
 }

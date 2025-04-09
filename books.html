@@ -12,7 +12,9 @@
                 <div class="logo" style="background-image: url('src/images/wunderbare_seiten_logo.png');"></div>
             </div>
             <div class="us-holder">
-                <div id="cover" class="us-element" style="margin-right: 0px;"></div>
+                <div id="cover" class="us-element" style="margin-right: 0px;">
+                    <button id="purchase-button" class="purchase-button">Auf Amazon kaufen</button>
+                </div>
             </div>
             <div class="us-description">
                 <div id="description" style="text-align: center;"></div>
@@ -55,6 +57,8 @@
     
             document.getElementById("description").textContent = book.longDescription;
             document.getElementById("cover").style.backgroundImage = "url('src/images/covers/" + book.coverName + "')";
+            document.getElementById("purchase-button").button.href = "https://example.com";
+            document.getElementById("purchase-button").button.target = "_blank";
         })
         .catch(err => console.error("Fehler beim Laden der JSON:", err));
     };
