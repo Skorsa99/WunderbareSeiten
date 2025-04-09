@@ -29,9 +29,10 @@ body {
     width: 100vw;
     display: flex;
     flex-direction: row;
+    align-items: center;
 }
 
-.logo-holder {
+.logo-holder-big {
     height: 100%;
     aspect-ratio: 1 / 1;
     display: flex;
@@ -41,7 +42,21 @@ body {
     z-index: 10;
 }
 
-.logo-big {
+.logo-holder-small {
+    height: 100px;
+    aspect-ratio: 1 / 1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.logo {
     height: 50%;
     width: 50%;
     background-position: center center;
@@ -76,6 +91,42 @@ body {
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
+}
+
+.us-holder {
+    height: 100%;
+    width: fit-content;
+    padding: 100px;
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+}
+
+.us-element {
+    height: 100%;
+    aspect-ratio: 0.61 / 1;
+    margin-right: 20px;
+    box-shadow: var(--shadow);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+
+
+
+    background-color: red;
+}
+
+.us-description {
+    height: calc(100% - 100px);
+    display: flex;
+    flex-grow: 1;
+    font-size: 25px;
+    justify-content: center;
+    align-items: center;
+    padding-right: 100px;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 .footer {
