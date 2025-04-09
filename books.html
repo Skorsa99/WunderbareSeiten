@@ -21,7 +21,7 @@
         <div class="footer">
             <div class="horizontal-line-75"></div>
             <div style="display: flex; flex-direction: row;">
-                <div class="footer-text-element">Wunderbare Seiten V3.11</div>
+                <div class="footer-text-element">Wunderbare Seiten V3.12</div>
                 <div class="footer-text-element">|</div>
                 <a class="footer-text-element" href="about_us.html">Über Uns</a>
                 <div class="footer-text-element">|</div>
@@ -37,7 +37,7 @@
       const params = new URLSearchParams(window.location.search);
       const urlParam = params.get("url");
   
-      if (!urlName) {
+      if (!urlParam) {
         console.error("Kein 'url' Parameter in der URL gefunden.");
         return;
       }
