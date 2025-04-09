@@ -58,9 +58,9 @@
 
                     newDiv.style.backgroundImage = "url('src/images/covers/" + coverName + "')";
 
-                    // Add click event to redirect in the same tab
-                    newDiv.onclick = () => {
-                        window.location.href = "buch/" + urlName;
+                    // Set up redirect on click
+                    bookDiv.onclick = () => {
+                        window.location.href = `books.html?url=${encodeURIComponent(urlName)}`;
                     };
 
                     holder.appendChild(newDiv);
