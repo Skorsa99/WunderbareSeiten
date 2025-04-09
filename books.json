@@ -1,0 +1,13 @@
+{
+    "books": [
+      {
+        "id": "ws-001",
+        "title": "Bruno im All",
+        "urlName": "bruno_im_all",
+        "shortDescription": "Bruno lässt sich nicht von seinem Rollstuhl zurückhalten und verfolgt seinen größten Traum.",
+        "coverName": "bruno_im_all_deutsch.png",
+        "longDescription": "Bruno lässt sich nicht von seinem Rollstuhl davon abhalten riesengroß zu träumen: Er möchte Astronaut werden! Auf seinem Weg ins All muss Bruno viele Hindernisse überwinden. Er lernt, dass seine vermeintliche Schwäche eigentlich seine größte Stärke ist. Eine herzerwärmende Geschichte über Mut, Zusammenhalt und die Kraft, an sich selbst zu glauben.",
+        "storeLink": "https://example.com/store/ws-001"
+      }
+    ]
+  }

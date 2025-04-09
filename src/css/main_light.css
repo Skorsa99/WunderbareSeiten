@@ -1,0 +1,113 @@
+:root {
+    --primary-color: #2A292E;
+    --secondary-color: #F6F6F6;
+    --tritery-color: #676570;
+    --quadery-color: #ffffff;
+    --fifth-color: #BBAABB;
+    --confirm-color: rgb(93, 255, 93);
+    --confirm-color-light: rgb(151, 255, 151);
+    --cancel-color: rgb(255, 79, 79);
+    --cancel-color-light: rgb(255, 131, 131);
+    --wait-color: rgb(255, 215, 71);
+    --wait-color-light: rgb(255, 227, 124);
+
+    --shadow: 0 0 10px rgba(0,0,0,0.1), 0 0 10px rgba(0,0,0,0.1), 0 0 10px rgba(0,0,0,0.1);
+    --shadow-medium: 0 0 14px rgba(0,0,0,0.15), 0 0 14px rgba(0,0,0,0.15), 0 0 14px rgba(0,0,0,0.15);
+    --shadow-strong: 0 0 20px rgba(0,0,0,0.2), 0 0 20px rgba(0,0,0,0.2), 0 0 20px rgba(0,0,0,0.2);
+}
+
+body {
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--primary-color);
+    font-weight: lighter;
+    font-size: 16px;
+}
+
+.content-holder {
+    height: calc(100vh - 45px);
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+}
+
+.logo-holder {
+    height: 100%;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, white calc(100% - 45px), transparent);
+    z-index: 10;
+}
+
+.logo-big {
+    height: 50%;
+    width: 50%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.cover-element-holder {
+    height: 100%;
+    display: flex;
+    flex-grow: 1;
+    overflow-y: scroll;
+    align-items: center;
+    margin-left: -45px;
+    padding-left: 45px;
+    padding-right: 45px;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.cover-element-holder::-webkit-scrollbar {
+    display: none;
+}
+
+.cover-element {
+    height: 75%;
+    aspect-ratio: 0.61 / 1;
+    margin-right: 20px;
+    box-shadow: var(--shadow);
+    cursor: pointer;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    background-color: brown;
+}
+
+.footer {
+    height: 45px;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--fifth-color);
+}
+
+/* Texts -------------------------------------------------------------------------------- */
+
+.footer-text-element {
+    color: var(--fifth-color);
+    margin: 12.5px;
+}
+
+/* Seperators --------------------------------------------------------------------------- */
+
+.horizontal-line-75 {
+    height: 2px;
+    width: 75%;
+    background-color: var(--fifth-color);
+}
+
+/* Transitions -------------------------------------------------------------------------- */
+
+.transition-vertically-white-transperent-45px {
+    height: 100%;
+    width: 45px;
+    background: linear-gradient(to right, white, transparent);
+}

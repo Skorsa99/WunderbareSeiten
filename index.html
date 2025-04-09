@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Homepage</title>
+        <link rel="stylesheet" href="src/css/main_light.css">
+    </head>
+    <body>
+        <div class="content-holder">
+            <div class="logo-holder">
+                <div class="logo-big" style="background-image: url('src/images/wunderbare_seiten_logo.png');"></div>
+            </div>
+            <div id="cover-holder" class="cover-element-holder">
+                <div class="cover-element"></div>
+                <div class="cover-element"></div>
+                <div class="cover-element"></div>
+                <div class="cover-element"></div>
+                <div class="cover-element"></div>
+                <div class="cover-element"></div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="horizontal-line-75"></div>
+            <div style="display: flex; flex-direction: row;">
+                <div class="footer-text-element">Wunderbare Seiten</div>
+                <div class="footer-text-element">|</div>
+                <div class="footer-text-element">Über Uns</div>
+                <div class="footer-text-element">|</div>
+                <div class="footer-text-element">Unser Amazon-Store</div>
+            </div>
+        </div>
+    </body>
+</html>
+
+<script>
+    window.onload = function () {
+        fetch('books.json')
+            .then(response => response.json())
+            .then(data => {
+                data.books.forEach(book => {
+                    const id = book.id;
+                    const title = book.title;
+                    const urlName = book.urlName;
+                    const shortDesc = book.shortDescription;
+                    const coverName = book.coverName;
+                    const longDesc = book.longDescription;
+                    const storeLink = book.storeLink;
+
+                    const holder = document.getElementById('cover-holder');
+
+                    /*
+                    // Example: log values
+                    console.log("ID:", id);
+                    console.log("Title:", title);
+                    console.log("Short Description:", shortDesc);
+                    console.log("Image URL:", imageUrl);
+                    console.log("Long Description:", longDesc);
+                    console.log("Store Link:", storeLink);
+                    console.log("-----------------------");
+                    */
+
+                    const newDiv = document.createElement("div");
+                    newDiv.classList.add("cover-element");
+
+                    newDiv.style.backgroundImage = "url('src/images/covers/" + coverName + "')";
+
+                    // Add click event to redirect in the same tab
+                    bookDiv.onclick = () => {
+                        window.location.href = urlName;
+                    };
+
+                    holder.appendChild(newDiv);
+                    
+                });
+        })
+        .catch(error => {
+            console.error("Error loading books.json:", error);
+        });
+    };
+  </script>
