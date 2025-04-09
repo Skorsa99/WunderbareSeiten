@@ -21,7 +21,7 @@
         <div class="footer">
             <div class="horizontal-line-75"></div>
             <div style="display: flex; flex-direction: row;">
-                <div class="footer-text-element">Wunderbare Seiten V3.9</div>
+                <div class="footer-text-element">Wunderbare Seiten V3.10</div>
                 <div class="footer-text-element">|</div>
                 <a class="footer-text-element" href="about_us.html">Über Uns</a>
                 <div class="footer-text-element">|</div>
@@ -35,7 +35,7 @@
     window.onload = function () {
       // 1. URL-Parameter auslesen
       const params = new URLSearchParams(window.location.search);
-      const urlName = params.get("url");
+      const urlParam = params.get("url");
   
       if (!urlName) {
         console.error("Kein 'url' Parameter in der URL gefunden.");
@@ -46,10 +46,10 @@
       fetch("books.json")
         .then(response => response.json())
         .then(data => {
-            const book = data.books.find(b => b.urlName === urlName);
+            const book = data.books.find(b => b.urlName === urlParam);
   
             if (!book) {
-                console.error("Kein Buch mit url =", urlName, "gefunden.");
+                console.error("Kein Buch mit url =", urlParam, "gefunden.");
                 return;
             }
     
