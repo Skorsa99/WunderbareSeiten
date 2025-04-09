@@ -21,7 +21,7 @@
         <div class="footer">
             <div class="horizontal-line-75"></div>
             <div style="display: flex; flex-direction: row;">
-                <div class="footer-text-element">Wunderbare Seiten V3.8</div>
+                <div class="footer-text-element">Wunderbare Seiten V3.9</div>
                 <div class="footer-text-element">|</div>
                 <a class="footer-text-element" href="about_us.html">Über Uns</a>
                 <div class="footer-text-element">|</div>
@@ -46,10 +46,10 @@
       fetch("books.json")
         .then(response => response.json())
         .then(data => {
-            const book = data.books.find(b => b.urlName === urName);
+            const book = data.books.find(b => b.urlName === urlName);
   
             if (!book) {
-                console.error("Kein Buch mit url =", urName, "gefunden.");
+                console.error("Kein Buch mit url =", urlName, "gefunden.");
                 return;
             }
     
