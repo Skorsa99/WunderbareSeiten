@@ -8,7 +8,7 @@
     </head>
     <body>
         <div class="content-holder">
-            <div class="logo-holder-big">
+            <div class="logo-holder-small">
                 <div class="logo" style="background-image: url('src/images/wunderbare_seiten_logo.png');"></div>
             </div>
             <div class="us-holder">
@@ -46,15 +46,15 @@
       fetch("books.json")
         .then(response => response.json())
         .then(data => {
-          const book = data.books.find(b => b.url === urlName);
+            const book = data.books.find(b => b.urlName === urName);
   
-          if (!book) {
-            console.error("Kein Buch mit url =", urlName, "gefunden.");
-            return;
-          }
-  
-          document.getElementById("description").textContent = book.longDescription;
-          document.getElementById("cover").style.backgroundImage = "url('src/images/covers/" + coverName + "')";
+            if (!book) {
+                console.error("Kein Buch mit url =", urlName, "gefunden.");
+                return;
+            }
+    
+            document.getElementById("description").textContent = book.longDescription;
+            document.getElementById("cover").style.backgroundImage = "url('src/images/covers/" + coverName + "')";
         })
         .catch(err => console.error("Fehler beim Laden der JSON:", err));
     };
