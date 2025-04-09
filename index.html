@@ -11,14 +11,7 @@
             <div class="logo-holder">
                 <div class="logo-big" style="background-image: url('src/images/wunderbare_seiten_logo.png');"></div>
             </div>
-            <div id="cover-holder" class="cover-element-holder">
-                <div class="cover-element"></div>
-                <div class="cover-element"></div>
-                <div class="cover-element"></div>
-                <div class="cover-element"></div>
-                <div class="cover-element"></div>
-                <div class="cover-element"></div>
-            </div>
+            <div id="cover-holder" class="cover-element-holder"></div>
         </div>
         <div class="footer">
             <div class="horizontal-line-75"></div>
@@ -66,7 +59,7 @@
                     newDiv.style.backgroundImage = "url('src/images/covers/" + coverName + "')";
 
                     // Add click event to redirect in the same tab
-                    bookDiv.onclick = () => {
+                    newDiv.onclick = () => {
                         window.location.href = urlName;
                     };
 
