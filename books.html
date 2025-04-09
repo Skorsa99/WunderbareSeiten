@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bücher</title>
+        <link rel="stylesheet" href="src/css/main_light.css">
+    </head>
+    <body>
+        <div class="content-holder">
+            <div class="logo-holder-big">
+                <div class="logo" style="background-image: url('src/images/wunderbare_seiten_logo.png');"></div>
+            </div>
+            <div class="us-holder">
+                <div id="cover" class="us-element" style="margin-right: 0px;"></div>
+            </div>
+            <div class="us-description">
+                <div id="description" style="text-align: center;"></div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="horizontal-line-75"></div>
+            <div style="display: flex; flex-direction: row;">
+                <div class="footer-text-element">Wunderbare Seiten</div>
+                <div class="footer-text-element">|</div>
+                <a class="footer-text-element" href="about_us.html">Über Uns</a>
+                <div class="footer-text-element">|</div>
+                <div class="footer-text-element">Unser Amazon-Store</div>
+            </div>
+        </div>
+    </body>
+</html>
+
+<script>
+    window.onload = function () {
+      // 1. URL-Parameter auslesen
+      const params = new URLSearchParams(window.location.search);
+      const urlName = params.get("url");
+  
+      if (!urlName) {
+        console.error("Kein 'url' Parameter in der URL gefunden.");
+        return;
+      }
+  
+      // 2. JSON laden (oder direkt einbinden, wenn du es inline hast)
+      fetch("books.json")
+        .then(response => response.json())
+        .then(data => {
+          const book = data.books.find(b => b.url === urlName);
+  
+          if (!book) {
+            console.error("Kein Buch mit url =", urlName, "gefunden.");
+            return;
+          }
+  
+          document.getElementById("description").textContent = book.longDescription;
+          document.getElementById("cover").style.backgroundImage = "url('src/images/covers/" + coverName + "')";
+        })
+        .catch(err => console.error("Fehler beim Laden der JSON:", err));
+    };
+  </script>
