@@ -84,7 +84,7 @@ body {
 
 .cover-element {
     height: 75%;
-    aspect-ratio: 0.61 / 1;
+    aspect-ratio: 2 / 3;
     margin-right: 20px;
     box-shadow: var(--shadow);
     cursor: pointer;
@@ -104,7 +104,7 @@ body {
 
 .us-element {
     height: 100%;
-    aspect-ratio: 0.61 / 1;
+    aspect-ratio: 2 / 3;
     margin-right: 20px;
     box-shadow: var(--shadow);
     background-size: cover;
