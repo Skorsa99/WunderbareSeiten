@@ -1,6 +1,6 @@
 {
     "books": [
-      {
+        {
         "id": "ws-001",
         "title": "Bruno im All",
         "urlName": "bruno_im_all",
@@ -10,6 +10,6 @@
         "author": "Samuel Skorsetz",
         "illustrated": "Samuel Skorsetz",
         "storeLink": "https://example.com/store/ws-001"
-      }
+        }
     ]
 }
