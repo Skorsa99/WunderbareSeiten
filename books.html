@@ -61,7 +61,7 @@
             document.getElementById("cover").style.backgroundImage = "url('src/images/covers/" + book.coverName + "')";
             document.getElementById("purchase-button").onclick = function () {
                 // window.open(book.storeLink, "_blank");
-                window.open("https://example.com", "_blank");
+                window.open(book.storeLink, "_blank");
             };
         })
         .catch(err => console.error("Fehler beim Laden der JSON:", err));
